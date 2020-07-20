@@ -1,0 +1,230 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "LemonTuesday";
+  src: url('../fonts/Lemontuesday.woff2') format('woff2'),
+    url('../fonts/Lemontuesday.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Oranienbaum";
+  src: url('../fonts/Oranienbaum.woff2') format('woff2'),
+    url('../fonts/Oranienbaum.woff') format('woff');
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  background-image: url(../images/header-bg.png);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  margin-bottom: 83px;
+}
+
+.header__top {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu__list {
+  display: flex;
+}
+
+.menu__list a {
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.menu__list a:hover {
+  color: rgb(229, 0, 57);
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 30px;
+  border: 2px solid rgb(229, 0, 57);
+}
+
+.menu__list-item+.menu__list-item {
+  margin-left: 20px;
+}
+
+.menu__bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.menu__bar-item+.menu__bar-item {
+  margin-left: 10px;
+}
+
+.header__inner {
+  margin: 50px 0 200px;
+}
+
+.header__inner-items {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+}
+
+.header__inner-social {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.header__inner-social img {
+  margin-bottom: 10px;
+}
+
+.header__lick img {
+  width: 50%;
+}
+
+.header__inner-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  max-width: 370px;
+  top: 160px;
+}
+
+.header__inner-info--title span {
+  padding-left: 120px;
+}
+
+.header__inner-info--title {
+  font-size: 63px;
+  font-family: "LemonTuesday";
+  color: rgb(255, 255, 255);
+  line-height: 0.909;
+  margin-bottom: 20px;
+}
+
+.header__inner-info--description {
+  font-size: 20px;
+  font-family: "Oranienbaum";
+  color: rgb(229, 0, 57);
+  margin-bottom: 30px;
+}
+
+.header__inner-info--btn {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: "Oranienbaum";
+  color: rgb(229, 0, 57);
+  line-height: 2.833;
+  border-radius: 50px;
+  background-color: rgb(255, 255, 255);
+  padding: 0 30px;
+  border: 2px solid rgb(229, 0, 57);
+}
+
+.header__inner-info--btn:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(229, 0, 57);
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.header__bottom {
+  background-image: url(../images/header-bottom-img.png);
+  background-repeat: no-repeat;
+}
+
+.header__bottom-name {
+  font-size: 46px;
+  font-family: "LemonTuesday";
+  color: rgb(229, 1, 56);
+  position: relative;
+  right: -50px;
+  top: -25px;
+}
+
+.gallery {
+  background-image: url(../images/вектор-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+.gallery-items {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 5vw);
+  grid-gap: 1.5rem;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery__item-1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+
+.gallery__item-2 {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.gallery__item-3 {
+  grid-column-start: 7;
+  grid-column-end: 10;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.gallery__item-4 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 6;
+  grid-row-end: 10;
+}
+
+.gallery__item-5 {
+  grid-column-start: 4;
+  grid-column-end: 10;
+  grid-row-start: 5;
+  grid-row-end: 10;
+}
+
+.gallery__name-top {
+  position: relative;
+  top: -430px;
+  left: 400px;
+}
+
+.gallery__name span {
+  position: relative;
+  right: 0;
+}
