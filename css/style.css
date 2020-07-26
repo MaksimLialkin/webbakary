@@ -28,6 +28,7 @@ a {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
+  max-height: 100%;
 }
 
 .header {
@@ -54,6 +55,7 @@ a {
   color: rgb(255, 255, 255);
   text-transform: uppercase;
   line-height: 1.2;
+  transition: 0.5s;
 }
 
 .menu__list a:hover {
@@ -79,7 +81,7 @@ a {
 }
 
 .header__inner {
-  margin: 50px 0 200px;
+  margin: 100px 0 200px;
 }
 
 .header__inner-items {
@@ -108,7 +110,7 @@ a {
   align-items: flex-end;
   position: absolute;
   max-width: 370px;
-  top: 160px;
+  top: 200px;
 }
 
 .header__inner-info--title span {
@@ -130,36 +132,22 @@ a {
   margin-bottom: 30px;
 }
 
-.header__inner-info--btn {
+.button {
   text-transform: uppercase;
   font-size: 18px;
   font-family: "Oranienbaum";
   color: rgb(229, 0, 57);
-  line-height: 2.833;
   border-radius: 50px;
   background-color: rgb(255, 255, 255);
-  padding: 0 30px;
+  padding: 10px 30px;
   border: 2px solid rgb(229, 0, 57);
+  transition: 0.7s;
 }
 
-.header__inner-info--btn:hover {
+.button:hover {
   color: rgb(255, 255, 255);
   background-color: rgb(229, 0, 57);
   border: 2px solid rgb(255, 255, 255);
-}
-
-.header__bottom {
-  background-image: url(../images/header-bottom-img.png);
-  background-repeat: no-repeat;
-}
-
-.header__bottom-name {
-  font-size: 46px;
-  font-family: "LemonTuesday";
-  color: rgb(229, 1, 56);
-  position: relative;
-  right: -50px;
-  top: -25px;
 }
 
 .gallery {
@@ -167,6 +155,21 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
+  padding-bottom: 50px;
+}
+
+.gallery__top {
+  background-image: url(../images/header-bottom-img.png);
+  background-repeat: no-repeat;
+}
+
+.gallery__top-name {
+  font-size: 46px;
+  font-family: "LemonTuesday";
+  color: rgb(229, 1, 56);
+  position: relative;
+  left: 70px;
+  top: -25px;
 }
 
 .gallery-items {
@@ -174,6 +177,7 @@ a {
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(9, 5vw);
   grid-gap: 1.5rem;
+  margin-bottom: 85px;
 }
 
 .gallery__img {
@@ -218,13 +222,527 @@ a {
   grid-row-end: 10;
 }
 
-.gallery__name-top {
+.gallery__name {
   position: relative;
-  top: -430px;
-  left: 400px;
+  top: -420px;
+  left: 30px;
+  font-family: "LemonTuesday";
+  font-size: 30px;
+  color: rgb(255, 255, 255);
 }
 
-.gallery__name span {
+.logo img {
   position: relative;
-  right: 0;
+  left: 900px;
+}
+
+.gallery__services {
+  background-image: url(../images/services-bottom.png);
+  background-repeat: no-repeat;
+}
+
+.gallery__services-name {
+  font-family: "LemonTuesday";
+  color: rgb(229, 1, 56);
+  font-size: 45px;
+  margin-bottom: 50px;
+  position: relative;
+  top: -25px;
+  left: 70px;
+}
+
+.gallery__services-item {
+  max-width: 550px;
+  width: 100%;
+  padding: 40px 40px;
+  border: 1px solid transparent;
+  margin: 0 10px 10px 10px;
+  text-align: center;
+  font-size: 35px;
+  font-family: "Oranienbaum";
+  color: rgb(229, 0, 57);
+  line-height: 1.467;
+  background-color: #fff;
+  box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.32);
+  position: relative;
+}
+
+.gallery__services-item::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 35px;
+  top: 20px;
+  background-repeat: no-repeat;
+}
+
+.item-1::before {
+  background-image: url(../images/services-1.png);
+}
+
+.item-2::before {
+  background-image: url(../images/services-4.png);
+}
+
+.item-3::before {
+  background-image: url(../images/services-2.png);
+}
+
+.item-4::before {
+  background-image: url(../images/services-5.png);
+}
+
+.item-5::before {
+  background-image: url(../images/services-3.png);
+}
+
+.item-6::before {
+  background-image: url(../images/services-6.png);
+}
+
+.gallery__services-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contacts {
+  background-image: url(../images/contacts-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  padding: 50px 0;
+  margin-bottom: 50px;
+}
+
+.contacts__inner {
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contacts__form {
+  background-image: url(../images/contacts-bottom.png);
+  background-repeat: no-repeat;
+  background-position: 50% 17%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 20px;
+}
+
+.contacts__form-title {
+  font-size: 50px;
+  font-family: "LemonTuesday";
+  color: rgb(229, 0, 57);
+  line-height: 1.027;
+  margin: 50px 0;
+}
+
+.contacts__form-item {
+  margin-bottom: 20px;
+  width: 70%;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid transparent;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: "Oranienbaum";
+  color: rgb(179, 131, 131);
+}
+
+.contacts__form-btn {
+  margin-bottom: 20px;
+}
+
+.logo__contacts img,
+.logo__footer img {
+  position: relative;
+  left: 0;
+}
+
+.ourteam {
+  background-image: url(../images/our-team-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.ourteam__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.ourteam__top {
+  background-image: url(../images/ourteam-bottom.png);
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+  text-align: center;
+}
+
+.ourteam__title {
+  font-size: 50px;
+  font-family: "LemonTuesday";
+  color: rgb(229, 0, 57);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.ourteam__text {
+  max-width: 580px;
+  display: inline-block;
+  font-size: 12px;
+  font-family: "Oranienbaum";
+  color: rgb(229, 0, 57);
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.ourteam-items {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.ourteam-item {
+  text-align: center;
+  max-width: 261px;
+}
+
+.ourteam-img {
+  margin-bottom: 20px;
+}
+
+.ourteam__name {
+  font-size: 25px;
+  font-family: "Oranienbaum";
+  color: rgb(229, 0, 57);
+  line-height: 2.054;
+}
+
+.ourteam__position {
+  font-size: 15px;
+  font-family: "Oranienbaum";
+  color: rgb(229, 0, 57);
+  line-height: 0.5;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.ourteam__position::after {
+  content: "";
+  height: 2px;
+  background-color: rgb(173, 196, 182);
+  position: absolute;
+  width: 76px;
+  top: 20px;
+  right: 92px;
+}
+
+.ourteam__description {
+  font-size: 14px;
+  font-family: "Oranienbaum";
+  color: rgb(229, 0, 57);
+  line-height: 1.429;
+}
+
+.ourteam__bottom {
+  display: flex;
+}
+
+.ourteam__bottom-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 0 15px;
+}
+
+.ourteam__bottom-item::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgb(229, 0, 57);
+  opacity: 0.769;
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+  left: 100px;
+  top: 50px;
+}
+
+.ourteam__bottom-img {
+  text-align: center;
+  width: 146px;
+  height: 146px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 6px 22.04px 6.96px rgba(0, 0, 0, 0.14);
+  margin-bottom: 20px;
+}
+
+.ourteam__bottom-img img {
+  transform: translateY(30px);
+}
+
+.ourteam__bottom-title {
+  font-size: 25px;
+  font-family: "Oranienbaum";
+  color: rgb(229, 0, 57);
+  margin-bottom: 20px;
+}
+
+.ourteam__bottom-descr {
+  text-align: center;
+  font-size: 14px;
+  font-family: "Oranienbaum";
+  color: rgb(229, 0, 57);
+  line-height: 1.429;
+  width: 90%;
+}
+
+.order {
+  background-image: url(../images/order-bg.jpg);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  height: 100vh;
+  padding-top: 50px;
+}
+
+.order__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-image: url(../images/order-bottom.png);
+  background-repeat: no-repeat;
+  background-position: 80% 5%;
+}
+
+.order__inner-items {
+  width: 640px;
+}
+
+.order__title {
+  font-size: 50px;
+  font-family: "LemonTuesday";
+  color: rgb(229, 0, 57);
+  margin-bottom: 200px;
+}
+
+.order__items {
+  font-size: 36px;
+  font-family: "Oranienbaum";
+  color: rgb(229, 0, 57);
+  line-height: 2;
+}
+
+.news {
+  border-top: 10px solid rgb(209, 227, 218);
+  border-bottom: 10px solid rgb(209, 227, 218);
+  padding: 50px 0;
+}
+
+.news__inner {
+  text-align: center;
+}
+
+.news__slider {
+  margin-bottom: 50px;
+}
+
+.news__slider-item img {
+  object-fit: cover;
+  width: 360px;
+  height: 272px;
+}
+
+.news__title {
+  background-image: url(../images/news-bottom.png);
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  font-size: 50px;
+  font-family: "LemonTuesday";
+  color: rgb(229, 0, 57);
+  margin: 0 0 60px;
+}
+
+.news__descr-img {
+  width: 360px;
+  height: 272px;
+  background: rgba(255, 255, 255, .75);
+  top: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  display: none;
+  font-family: "Oranienbaum";
+  color: rgb(229, 0, 57);
+  line-height: 1;
+  padding: 0 35px;
+}
+
+.news__slider-item:hover .news__descr-img {
+  display: flex;
+}
+
+.news__descr-items {
+  font-size: 14px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.news__descr-name::before {
+  content: "|";
+  padding: 0 10px;
+}
+
+.news__descr-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.news__descr-text {
+  font-size: 14px;
+}
+
+.button-news:hover {
+  border: rgb(229, 0, 57);
+}
+
+.slick-btn {
+  position: absolute;
+  top: 50%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.slick-prev {
+  left: -70px;
+}
+
+.slick-next {
+  right: -50px;
+}
+
+.video {
+  background-image: url(../images/video-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.video-img {
+  position: relative;
+}
+
+.video-img iframe {
+  top: 41px;
+  left: 76px;
+  width: 1026px;
+  height: 705px;
+  border-radius: 3%;
+  position: absolute;
+}
+
+.footer {
+  background-color: rgb(164, 190, 178);
+}
+
+.footer__items {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  border-bottom: 1px solid rgb(138, 16, 46);
+  ;
+}
+
+.footer__item-logo {
+  width: 430px;
+}
+
+.logo__footer img {
+  margin-bottom: 20px;
+}
+
+.footer__btn {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footer__btn a {
+  display: flex;
+  padding: 5px;
+  background-color: rgb(216, 216, 216);
+  width: 200px;
+  transition: 0.5s;
+}
+
+.footer__btn a:hover {
+  background-color: rgb(138, 16, 46);
+}
+
+.footer__btn img {
+  margin: 0 20px 0 10px;
+}
+
+.footer__btn-title {
+  line-height: 1;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+}
+
+.footer__btn-title span {
+  display: block;
+  font-size: 25px;
+}
+
+.footer__social a+a {
+  margin-left: 20px;
+}
+
+.footer__item ul {
+  list-style: none;
+}
+
+.footer__item-title {
+  font-size: 16px;
+  font-family: "Oranienbaum";
+  color: rgb(138, 16, 46);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.footer__item+.footer__item {
+  padding-left: 60px;
+  border-left: 2px solid #bfcfd4;
+}
+
+.footer__item li+li {
+  margin-top: 10px;
+}
+
+.footer__item a {
+  color: rgb(138, 16, 46);
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 14px;
+  color: rgb(138, 16, 46);
+}
+
+.footer__column-right {
+  display: flex;
+}
+
+.footer__privacy::before {
+  content: "|";
+  padding: 0 5px;
 }

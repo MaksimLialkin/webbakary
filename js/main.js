@@ -1,10 +1,19 @@
-// $('[data-fancybox="images"]').fancybox({
-//   afterLoad: function (instance, current) {
-//     var pixelRatio = window.devicePixelRatio || 1;
+$(function () {
+    $('.news__slider').slick({
+        prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="images/arrow-left.png"></button>',
+        nextArrow: '<button type="button" class="slick-btn slick-next"><img src="images/arrow-right.png"></button>',
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+    });
 
-//     if (pixelRatio > 1.5) {
-//       current.width = current.width / pixelRatio;
-//       current.height = current.height / pixelRatio;
-//     }
-//   }
-// });
+    $(".menu").on("click", "a", function (event) {
+        event.preventDefault();
+        var id = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({
+            scrollTop: top
+        }, 1500);
+    });
+
+});
